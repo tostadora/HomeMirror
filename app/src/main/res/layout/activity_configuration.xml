@@ -20,7 +20,7 @@
             style="@style/ConfigurationItemText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Temperature" />
+            android:text="@string/temperature" />
 
         <RadioGroup
             android:id="@+id/temperature_group"
@@ -35,7 +35,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
-                android:text="Celsius" />
+                android:text="@string/celsius" />
 
             <RadioButton
                 android:id="@+id/farenheit"
@@ -44,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/item_margin"
                 android:layout_marginTop="0dp"
-                android:text="Farenheit" />
+                android:text="@string/farenheit" />
 
         </RadioGroup>
 
@@ -137,7 +137,7 @@
                     android:layout_alignBaseline="@id/location_title"
                     android:layout_marginLeft="@dimen/item_margin"
                     android:layout_toRightOf="@id/location_title"
-                    android:text="Couldn't detect a recent location" />
+                    android:text="@string/recentlocation" />
             </RelativeLayout>
 
             <LinearLayout
