@@ -19,7 +19,7 @@ android {
     buildToolsVersion "23.0.1"
     defaultConfig {
         applicationId "com.morristaedt.mirror"
-        minSdkVersion 14
+        minSdkVersion 17
         targetSdkVersion 22
         versionCode 4
         versionName "1.3"
@@ -28,6 +28,7 @@ android {
         debug {
             ext.enableCrashlytics = false
             applicationIdSuffix '.debug'
+            debuggable  true
         }
         release {
             minifyEnabled false
@@ -48,7 +49,7 @@ dependencies {
     compile 'com.squareup.retrofit:retrofit:1.9.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.github.ahorn:android-rss:cf40b89'
-    compile 'com.google.android.gms:play-services-vision:8.1.0'
+    compile 'com.google.android.gms:play-services-vision:8.4.0'
     compile('com.crashlytics.sdk.android:crashlytics:2.5.2@aar') {
         transitive = true;
     }
