@@ -35,7 +35,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
-                android:text="@string/celsius" />
+                android:text="@string/celsius"
+                android:checked="true" />
 
             <RadioButton
                 android:id="@+id/farenheit"
@@ -55,20 +56,6 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:text="@string/biking_hint" />
-
-        <CheckBox
-            android:id="@+id/mood_detection_checkbox"
-            style="@style/ConfigurationItemText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:text="@string/mood_detection_option" />
-
-        <TextView
-            style="@style/ConfigurationDescriptionText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/mood_explanation" />
 
         <CheckBox
             android:id="@+id/calendar_checkbox"
@@ -191,9 +178,16 @@
             android:id="@+id/launch_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/item_margin"
             android:text="@string/launch"
+            android:textSize="@dimen/configuration_text_size" />
+
+        <Button
+            android:id="@+id/cv_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_margin"
+            android:text="CV"
             android:textSize="@dimen/configuration_text_size" />
 
         <TextView

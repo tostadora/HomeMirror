@@ -38,7 +38,6 @@ public class SetUpActivity extends Activity {
 
     private RadioGroup mTemperatureChoice;
     private CheckBox mBikingCheckbox;
-    private CheckBox mMoodDetectionCheckbox;
     private CheckBox mShowNextCaledarEventCheckbox;
     private CheckBox mShowNewsHeadlineCheckbox;
     private CheckBox mXKCDCheckbox;
@@ -60,9 +59,6 @@ public class SetUpActivity extends Activity {
 
         mBikingCheckbox = (CheckBox) findViewById(R.id.biking_checkbox);
         mBikingCheckbox.setChecked(mConfigSettings.showBikingHint());
-
-        mMoodDetectionCheckbox = (CheckBox) findViewById(R.id.mood_detection_checkbox);
-        mMoodDetectionCheckbox.setChecked(mConfigSettings.showMoodDetection());
 
         mShowNextCaledarEventCheckbox = (CheckBox) findViewById(R.id.calendar_checkbox);
         mShowNextCaledarEventCheckbox.setChecked(mConfigSettings.showNextCalendarEvent());
@@ -97,6 +93,16 @@ public class SetUpActivity extends Activity {
                 imm.hideSoftInputFromWindow(mStockTickerSymbol.getWindowToken(), 0);
 
                 Intent intent = new Intent(SetUpActivity.this, MirrorActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.cv_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                saveFields();
+
+                Intent intent = new Intent(SetUpActivity.this, CVActivity.class);
                 startActivity(intent);
             }
         });
@@ -162,7 +168,6 @@ public class SetUpActivity extends Activity {
     private void saveFields() {
         mConfigSettings.setIsCelsius(mTemperatureChoice.getCheckedRadioButtonId() == R.id.celsius);
         mConfigSettings.setShowBikingHint(mBikingCheckbox.isChecked());
-        mConfigSettings.setShowMoodDetection(mMoodDetectionCheckbox.isChecked());
         mConfigSettings.setShowNextCalendarEvent(mShowNextCaledarEventCheckbox.isChecked());
         mConfigSettings.setShowNewsHeadline(mShowNewsHeadlineCheckbox.isChecked());
         mConfigSettings.setXKCDPreference(mXKCDCheckbox.isChecked(), mXKCDInvertCheckbox.isChecked());

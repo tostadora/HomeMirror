@@ -4,7 +4,13 @@
     android:layout_height="match_parent"
     android:gravity="right"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MirrorActivity">
+
+    <org.opencv.android.JavaCameraView
+        android:layout_width="fill_parent"
+        android:layout_height="23dp"
+        android:id="@+id/mirror_surface_view"
+        android:layout_gravity="center_horizontal" />
 
     <TextView
         android:id="@+id/birthday_text"
@@ -22,7 +28,18 @@
         android:layout_height="wrap_content"
         tools:text="Sunday the 22nd" />
 
-    <include layout="@layout/clock" />
+    <TextView
+        style="@style/MirrorText"
+        tools:text="Beautiful afternoon!"
+        android:id="@+id/daytime_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/digital_clock"
+        style="@style/MirrorText" />
 
     <TextView
         android:id="@+id/weather_summary"
@@ -71,14 +88,6 @@
         android:layout_marginTop="@dimen/mirror_item_spacing"
         android:gravity="right"
         android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/hello_text"
-            style="@style/MirrorListText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            tools:text="Good morning, Andy and Hannah" />
 
         <TextView
             android:id="@+id/can_bike"
@@ -133,7 +142,7 @@
             tools:visibility="gone" />
 
         <TextView
-            android:id="@+id/mood_text"
+            android:id="@+id/gestures_text"
             style="@style/MirrorListText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

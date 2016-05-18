@@ -37,7 +37,6 @@ public class ConfigurationSettings {
     private String mForecastUnits;
 
     private boolean mShowBikingHint;
-    private boolean mShowMoodDetection;
     private boolean mShowNextCalendarEvent;
     private boolean mShowNewsHeadline;
     private boolean mShowXKCD;
@@ -54,16 +53,15 @@ public class ConfigurationSettings {
     }
 
     private void readPrefs() {
-        mForecastUnits = mSharedPrefs.getString(FORECAST_UNITS, ForecastRequest.UNITS_US);
+        mForecastUnits = mSharedPrefs.getString(FORECAST_UNITS, ForecastRequest.UNITS_SI);
         mShowBikingHint = mSharedPrefs.getBoolean(BIKING_HINT, false);
-        mShowMoodDetection = mSharedPrefs.getBoolean(USE_MOOD_DETECTION, false);
         mShowNextCalendarEvent = mSharedPrefs.getBoolean(SHOW_CALENDAR, false);
         mShowNewsHeadline = mSharedPrefs.getBoolean(SHOW_HEADLINE, false);
         mShowXKCD = mSharedPrefs.getBoolean(SHOW_XKCD, false);
         mInvertXKCD = mSharedPrefs.getBoolean(INVERT_XKCD, false);
 
-        mLatitude = mSharedPrefs.getString(LAT, "");
-        mLongitude = mSharedPrefs.getString(LON, "");
+        mLatitude = mSharedPrefs.getString(LAT, "40.49");
+        mLongitude = mSharedPrefs.getString(LON, "-3.87");
 
         mStockTickerSymbol = mSharedPrefs.getString(STOCK_TICKER, "");
     }
@@ -78,13 +76,6 @@ public class ConfigurationSettings {
         mShowBikingHint = show;
         SharedPreferences.Editor editor = mSharedPrefs.edit();
         editor.putBoolean(BIKING_HINT, show);
-        editor.apply();
-    }
-
-    public void setShowMoodDetection(boolean show) {
-        mShowMoodDetection = show;
-        SharedPreferences.Editor editor = mSharedPrefs.edit();
-        editor.putBoolean(USE_MOOD_DETECTION, show);
         editor.apply();
     }
 
@@ -139,10 +130,6 @@ public class ConfigurationSettings {
 
     public boolean showBikingHint() {
         return mShowBikingHint;
-    }
-
-    public boolean showMoodDetection() {
-        return mShowMoodDetection;
     }
 
     public boolean showNextCalendarEvent() {

@@ -31,10 +31,9 @@ public class ForecastModule {
 
     /**
      * @param apiKey   The api key for the forecast.io weather api
-     * @param units
-     * @param lat
-     * @param lon
-     * @param listener
+     * @param units     SI or IMPERIAL Units
+     * @param lat       The latitude to search for
+     * @param lon       The longitude to search for
      */
     public static void getForecastIOHourlyForecast(final String apiKey, final String units, final String lat, final String lon, final ForecastListener listener) {
         new AsyncTask<Void, Void, ForecastResponse>() {
