@@ -1,1 +1,2 @@
 include ':app'
+include ':OpenCV-lib-3.1.0'
