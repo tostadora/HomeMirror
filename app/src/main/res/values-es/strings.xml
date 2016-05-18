@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HomeMirror</string>
+    <string name="bike_today">D�a de bici</string>
+    <string name="good_afternoon">Buenas tardes, %s</string>
+    <string name="good_evening">Buenas noches, %s</string>
+    <string name="good_morning">Buenos d�as, %s</string>
+    <string name="grocery_list">Hacer la lista de la compra</string>
+    <string name="set_up">Configuraci�n</string>
+    <string name="looking_good">Se te ve muy bien :)</string>
+    <string name="bedtime">Buenas noches, %s\n\nEs la hora de irse a dormir.</string>
+    <string name="biking_hint">Mostrar indicaciones de tiempo para la bici</string>
+    <string name="default_mirror_mirror">Espejito, espejito. %S es el m�s guapito.</string>
+    <string name="found_location">Localizaci�n hallada</string>
+    <string name="happy_birthday">¡Feliz cumpleaños, %s!</string>
+    <string name="how_to_stop">Para volver a la configuraci�n y detener el espejo, desliza hacia arriba desde la parte de abajo del espejo y presiona atr�s.</string>
+    <string name="invert_colors">Invertir los colores del comic</string>
+    <string name="it_gets_better">An�mate, coleguita</string>
+    <string name="late">Te has levantado tarde, %s</string>
+    <string name="latitude">Latitud</string>
+    <string name="launch">Lanzar</string>
+    <string name="location">Localizaci�n</string>
+    <string name="longitude">Longitud</string>
+    <string name="mood_detection_option">Detectar estado de �nimo</string>
+    <string name="mood_explanation">Usa la c�mara frontal para detectar tu expresi�n</string>
+    <string name="no_bike_today">Nada de bici hoy</string>
+    <string name="show_xkcd">Mostrar el nuevo xkcd</string>
+    <string name="water_plants">Regar las plantas</string>
+    <string name="temperature">Temperatura</string>
+    <string name="ticker_symbol">Siglas del valor, i.e. GOOG</string>
+    <string name="stock_description">Se muestra los d�as de diario si el valor oscila m�s de un 3%</string>
+    <string name="something_special">¡Yay! Hola, tesoro</string>
+    <string name="stock">Valores</string>
+    <string name="show_headline">Mostrar titulares de la BBC</string>
+    <string name="show_calendar_event">Mostrar siguiente evento de calendario</string>
+    <string name="recentlocation">No se ha detectado una localizaci�n reciente</string>
+    <string name="owners">Luis</string>
+    <string name="celsius">Celsius</string>
+</resources>
